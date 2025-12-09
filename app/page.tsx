@@ -63,3 +63,12 @@ export default function Home() {
     </div>
   );
 }
+export default function Page() {
+  return (
+    <main style={{ textAlign: 'center', padding: '2rem' }}>
+      <h1>Моя музыкальная платформа</h1>
+      <p>Здесь скоро появятся треки и плейлисты</p>
+      <button>Загрузить трек</button>
+    </main>
+  )
+}
