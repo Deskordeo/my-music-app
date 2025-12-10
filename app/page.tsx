@@ -5,7 +5,7 @@ export default function Page() {
     <main className="flex min-h-screen items-center justify-center bg-black px-6">
       <div className="w-full max-w-sm rounded-2xl bg-zinc-900 p-8 shadow-xl border border-zinc-800">
         <h1 className="text-3xl font-bold text-pink-400 text-center mb-6">
-          SeqaTune
+          Seqsound
         </h1>
 
         <p className="text-zinc-400 text-center mb-8">
