@@ -1,46 +1,43 @@
-import Image from "next/image";
-
 export default function Page() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        
-        {/* Пример картинки, можно убрать или заменить */}
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
+    <main className="flex min-h-screen items-center justify-center bg-black px-6">
+      <div className="w-full max-w-sm rounded-2xl bg-zinc-900 p-8 shadow-xl border border-zinc-800">
+        <h1 className="text-3xl font-bold text-pink-400 text-center mb-6">
+          SeqaTune
+        </h1>
 
-        {/* Основной контент */}
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Моя музыкальная платформа
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Здесь скоро появятся треки и плейлисты
-          </p>
-          <button className="mt-4 rounded bg-black text-white px-4 py-2 hover:bg-zinc-800">
-            Загрузить трек
-          </button>
-        </div>
+        <p className="text-zinc-400 text-center mb-8">
+          Войдите, чтобы продолжить
+        </p>
 
-        {/* Ссылки на документацию можно оставить или удалить */}
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row mt-10">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://nextjs.org/docs"
-            target="_blank"
-            rel="noopener noreferrer"
+        <form className="flex flex-col gap-4">
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full rounded-lg bg-zinc-800 px-4 py-3 text-white placeholder-zinc-500 outline-none focus:ring-2 focus:ring-pink-500"
+          />
+
+          <input
+            type="password"
+            placeholder="Пароль"
+            className="w-full rounded-lg bg-zinc-800 px-4 py-3 text-white placeholder-zinc-500 outline-none focus:ring-2 focus:ring-pink-500"
+          />
+
+          <button
+            type="submit"
+            className="w-full rounded-lg bg-pink-500 py-3 font-semibold text-black hover:bg-pink-400 transition"
           >
-            Documentation
-          </a>
-        </div>
+            Войти
+          </button>
+        </form>
 
-      </main>
-    </div>
+        <p className="mt-6 text-center text-zinc-500 text-sm">
+          Нет аккаунта?{" "}
+          <a className="text-pink-400 hover:underline" href="#">
+            Создать
+          </a>
+        </p>
+      </div>
+    </main>
   );
 }
